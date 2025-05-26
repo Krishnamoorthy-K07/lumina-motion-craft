@@ -1,6 +1,5 @@
 
 import { motion } from "framer-motion";
-import { ContactForm } from "../components/ContactForm";
 import { SocialLinks } from "../components/SocialLinks";
 
 const Contact = () => {
@@ -12,7 +11,7 @@ const Contact = () => {
       transition={{ duration: 0.6 }}
       className="min-h-screen pt-20 px-4 sm:px-6 lg:px-8"
     >
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -35,15 +34,6 @@ const Contact = () => {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-          >
-            <ContactForm />
-          </motion.div>
-          
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
-            className="space-y-8"
           >
             <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-8">
               <h3 className="text-2xl font-bold mb-6 text-white">Contact Information</h3>
@@ -68,23 +58,6 @@ const Contact = () => {
                     <p className="text-white font-semibold">638-387-4072</p>
                   </div>
                 </div>
-                
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full flex items-center justify-center">
-                    <span className="text-white font-bold">🌐</span>
-                  </div>
-                  <div>
-                    <p className="text-gray-300">Portfolio</p>
-                    <a 
-                      href="https://krishnamoorthy-k07.github.io/portfolio/" 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="text-purple-400 font-semibold hover:text-purple-300 transition-colors"
-                    >
-                      krishnamoorthy-k07.github.io/portfolio/
-                    </a>
-                  </div>
-                </div>
 
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center">
@@ -97,7 +70,13 @@ const Contact = () => {
                 </div>
               </div>
             </div>
-            
+          </motion.div>
+          
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+          >
             <SocialLinks />
           </motion.div>
         </div>

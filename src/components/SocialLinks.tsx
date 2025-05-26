@@ -16,12 +16,6 @@ export const SocialLinks = () => {
       color: "from-gray-600 to-gray-700"
     },
     {
-      name: "Portfolio",
-      url: "https://krishnamoorthy-k07.github.io/portfolio/",
-      icon: "🌐",
-      color: "from-purple-500 to-purple-600"
-    },
-    {
       name: "Email",
       url: "mailto:krishnamoorthy.k07@outlook.com",
       icon: "📧",
@@ -33,7 +27,7 @@ export const SocialLinks = () => {
     <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-8">
       <h3 className="text-2xl font-bold mb-6 text-white">Connect with me</h3>
       
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 gap-4">
         {socialLinks.map((link, index) => (
           <motion.a
             key={link.name}

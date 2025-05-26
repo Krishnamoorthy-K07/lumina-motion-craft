@@ -73,7 +73,7 @@ const About = () => {
             </div>
             
             <div className="text-center p-6 bg-gray-800/50 rounded-xl backdrop-blur-sm border border-gray-700">
-              <h3 className="text-2xl font-bold text-pink-400 mb-2">4</h3>
+              <h3 className="text-2xl font-bold text-pink-400 mb-2">4+</h3>
               <p className="text-gray-300">Infosys Certifications</p>
             </div>
           </motion.div>

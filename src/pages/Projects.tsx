@@ -36,74 +36,6 @@ const Projects = () => {
         "AWS S3 image storage",
         "Animated dark theme UI"
       ]
-    },
-    {
-      id: 3,
-      title: "Legacy System Migration",
-      description: "Successfully migrated a 60-year-old C++ monolith to 15+ Java Spring Boot microservices with 95% test coverage and modern DevOps practices.",
-      image: "/placeholder.svg",
-      technologies: ["Java 11", "Spring Boot", "Docker", "Kubernetes", "Jenkins", "AWS", "JUnit", "Mockito"],
-      liveUrl: "#",
-      githubUrl: "#",
-      date: "November 2023 - Present",
-      features: [
-        "15+ microservices architecture",
-        "95% test coverage with JUnit & Mockito",
-        "Containerized with Docker & Kubernetes",
-        "CI/CD pipeline with Jenkins",
-        "AWS cloud deployment"
-      ]
-    },
-    {
-      id: 4,
-      title: "Groovy/XSLT Automation Tool",
-      description: "Built an automation tool that reduced manual effort by 70% using Groovy and XSLT transformations for data processing and workflow automation.",
-      image: "/placeholder.svg",
-      technologies: ["Groovy", "XSLT", "Spring Boot", "PostgreSQL", "REST APIs"],
-      liveUrl: "#",
-      githubUrl: "#",
-      date: "February 2022 - November 2023",
-      features: [
-        "70% reduction in manual effort",
-        "Automated data transformations",
-        "XSLT template processing",
-        "REST API integration",
-        "PostgreSQL data persistence"
-      ]
-    },
-    {
-      id: 5,
-      title: "Spring Boot API Suite",
-      description: "Developed 15+ RESTful APIs with Spring Boot featuring optimized SQL queries, third-party integrations, and comprehensive security measures.",
-      image: "/placeholder.svg",
-      technologies: ["Spring Boot", "Spring Security", "PostgreSQL", "OAuth2", "REST APIs", "SQL Optimization"],
-      liveUrl: "#",
-      githubUrl: "#",
-      date: "2022 - 2023",
-      features: [
-        "15+ RESTful APIs",
-        "Optimized PostgreSQL queries",
-        "OAuth2 security implementation",
-        "Third-party API integrations",
-        "Comprehensive error handling"
-      ]
-    },
-    {
-      id: 6,
-      title: "Microservices DevOps Pipeline",
-      description: "Implemented complete DevOps pipeline for microservices using Docker, Kubernetes, Jenkins, and AWS with automated testing and deployment.",
-      image: "/placeholder.svg",
-      technologies: ["Docker", "Kubernetes", "Jenkins", "AWS", "Elasticsearch", "Monitoring", "CI/CD"],
-      liveUrl: "#",
-      githubUrl: "#",
-      date: "2023 - Present",
-      features: [
-        "Automated CI/CD pipeline",
-        "Container orchestration",
-        "Elasticsearch logging",
-        "AWS cloud infrastructure",
-        "Automated testing & deployment"
-      ]
     }
   ];
 
@@ -128,13 +60,13 @@ const Projects = () => {
             </span>
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            A showcase of my latest work featuring enterprise-level backend solutions, 
-            AI integrations, and modern microservices architecture.
+            A showcase of my latest AI-powered applications featuring enterprise-level backend solutions 
+            and modern microservices architecture.
           </p>
         </motion.div>
 
         <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
@@ -149,6 +81,24 @@ const Projects = () => {
               <ProjectCard project={project} />
             </motion.div>
           ))}
+        </motion.div>
+
+        <motion.div
+          className="text-center"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+        >
+          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+            <a
+              href="https://github.com/Krishnamoorthy-K07"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full text-white font-semibold hover:shadow-2xl hover:shadow-purple-500/25 transition-all duration-300"
+            >
+              View More on GitHub
+            </a>
+          </motion.div>
         </motion.div>
       </div>
     </motion.div>

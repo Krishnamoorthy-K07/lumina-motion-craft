@@ -10,8 +10,6 @@ import About from "./pages/About";
 import Projects from "./pages/Projects";
 import Skills from "./pages/Skills";
 import Contact from "./pages/Contact";
-import Articles from "./pages/Articles";
-import Profiles from "./pages/Profiles";
 import NotFound from "./pages/NotFound";
 import { Navbar } from "./components/Navbar";
 import { MouseFollower } from "./components/MouseFollower";
@@ -30,8 +28,6 @@ const AnimatedRoutes = () => {
         <Route path="/projects" element={<Projects />} />
         <Route path="/skills" element={<Skills />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/articles" element={<Articles />} />
-        <Route path="/profiles" element={<Profiles />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </AnimatePresence>

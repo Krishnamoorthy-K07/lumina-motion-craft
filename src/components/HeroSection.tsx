@@ -60,12 +60,11 @@ export const HeroSection = () => {
             
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <a 
-                href="https://krishnamoorthy-k07.github.io/portfolio/"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/resume.pdf"
+                download
                 className="inline-block px-8 py-4 border-2 border-blue-500 rounded-full text-blue-400 font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300"
               >
-                Portfolio Website
+                Download Resume
               </a>
             </motion.div>
           </motion.div>
