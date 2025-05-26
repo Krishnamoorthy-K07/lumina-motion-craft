@@ -5,36 +5,63 @@ import { SkillCategory } from "../components/SkillCategory";
 const Skills = () => {
   const skillCategories = [
     {
-      title: "Frontend Development",
+      title: "Programming Languages",
       skills: [
-        { name: "React", level: 95 },
-        { name: "TypeScript", level: 90 },
-        { name: "Next.js", level: 88 },
-        { name: "Three.js", level: 85 },
-        { name: "Framer Motion", level: 92 },
-        { name: "Tailwind CSS", level: 95 },
+        { name: "Java 8/11", level: 95 },
+        { name: "Groovy", level: 85 },
+        { name: "SQL", level: 90 },
+        { name: "JavaScript", level: 80 },
       ]
     },
     {
-      title: "Backend Development",
+      title: "Frameworks & Libraries",
       skills: [
-        { name: "Node.js", level: 88 },
-        { name: "Express", level: 85 },
-        { name: "Python", level: 80 },
-        { name: "PostgreSQL", level: 82 },
-        { name: "MongoDB", level: 78 },
-        { name: "GraphQL", level: 75 },
+        { name: "Spring Boot", level: 95 },
+        { name: "Spring Security", level: 90 },
+        { name: "Spring Data", level: 90 },
+        { name: "Hibernate", level: 85 },
+        { name: "OAuth2/JWT", level: 88 },
+        { name: "React JS", level: 80 },
       ]
     },
     {
-      title: "Tools & Technologies",
+      title: "Cloud & DevOps",
       skills: [
-        { name: "Git", level: 92 },
-        { name: "Docker", level: 75 },
-        { name: "AWS", level: 70 },
-        { name: "Figma", level: 85 },
-        { name: "Webpack", level: 80 },
-        { name: "Jest", level: 82 },
+        { name: "AWS (EC2, S3, Lambda)", level: 88 },
+        { name: "Docker", level: 90 },
+        { name: "Kubernetes", level: 85 },
+        { name: "Jenkins", level: 85 },
+        { name: "GitHub Actions", level: 80 },
+        { name: "Elasticsearch", level: 75 },
+      ]
+    },
+    {
+      title: "Databases & Storage",
+      skills: [
+        { name: "PostgreSQL", level: 90 },
+        { name: "MongoDB", level: 80 },
+        { name: "Redis", level: 75 },
+        { name: "AWS S3", level: 85 },
+      ]
+    },
+    {
+      title: "AI & Integration Tools",
+      skills: [
+        { name: "OpenAI API", level: 85 },
+        { name: "Spring AI", level: 80 },
+        { name: "Prompt Engineering", level: 82 },
+        { name: "Third-party APIs", level: 88 },
+      ]
+    },
+    {
+      title: "Architecture & Methodologies",
+      skills: [
+        { name: "Microservices", level: 95 },
+        { name: "Agile/Scrum", level: 90 },
+        { name: "Test-Driven Development", level: 88 },
+        { name: "Concurrency", level: 85 },
+        { name: "System Design", level: 85 },
+        { name: "Code Review", level: 90 },
       ]
     }
   ];
@@ -56,12 +83,12 @@ const Skills = () => {
         >
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
             <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-              My Skills
+              Technical Skills
             </span>
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            A comprehensive overview of my technical expertise and proficiency levels
-            across various technologies and tools.
+            A comprehensive overview of my technical expertise in backend development, 
+            cloud technologies, and modern software engineering practices.
           </p>
         </motion.div>
 

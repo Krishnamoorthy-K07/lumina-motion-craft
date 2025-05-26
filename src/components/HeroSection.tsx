@@ -18,10 +18,10 @@ export const HeroSection = () => {
             transition={{ duration: 1, delay: 0.5 }}
           >
             <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
-              Creative
+              Krishnamoorthy K
             </span>
             <br />
-            <span className="text-white">Developer</span>
+            <span className="text-white text-4xl md:text-5xl">Backend Developer</span>
           </motion.h1>
           
           <motion.p 
@@ -30,8 +30,8 @@ export const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
           >
-            Crafting immersive digital experiences with cutting-edge technology
-            and innovative design solutions.
+            Senior Systems Engineer specializing in Java Spring Boot microservices, 
+            cloud technologies, and scalable backend solutions with 3+ years of experience.
           </motion.p>
           
           <motion.div 
@@ -45,7 +45,7 @@ export const HeroSection = () => {
                 to="/projects"
                 className="inline-block px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full text-white font-semibold hover:shadow-2xl hover:shadow-purple-500/25 transition-all duration-300"
               >
-                View My Work
+                View My Projects
               </Link>
             </motion.div>
             
@@ -56,6 +56,17 @@ export const HeroSection = () => {
               >
                 Get In Touch
               </Link>
+            </motion.div>
+            
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <a 
+                href="https://krishnamoorthy-k07.github.io/portfolio/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block px-8 py-4 border-2 border-blue-500 rounded-full text-blue-400 font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300"
+              >
+                Portfolio Website
+              </a>
             </motion.div>
           </motion.div>
         </motion.div>

@@ -6,57 +6,104 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "3D Portfolio Website",
-      description: "An immersive portfolio experience with Three.js animations and interactive particles.",
+      title: "AI-Powered FAQ Chatbot",
+      description: "Intelligent customer support chatbot using GPT-3.5 and Spring Boot, deployed on AWS Lambda for scalability. Features real-time responses and context-aware conversations.",
       image: "/placeholder.svg",
-      technologies: ["React", "Three.js", "Framer Motion"],
+      technologies: ["Spring Boot", "OpenAI GPT-3.5", "AWS Lambda", "AWS EC2", "React.js", "JWT Auth"],
       liveUrl: "#",
-      githubUrl: "#"
+      githubUrl: "#",
+      date: "March 2025",
+      features: [
+        "GPT-3.5 integration for intelligent responses",
+        "AWS Lambda deployment for auto-scaling", 
+        "Real-time chat interface",
+        "Context-aware conversation handling"
+      ]
     },
     {
       id: 2,
-      title: "E-commerce Platform",
-      description: "A full-stack e-commerce solution with advanced filtering and payment integration.",
+      title: "AI-Powered Calorie Tracker",
+      description: "Food image analysis application using Spring AI for calorie estimation. Features JWT authentication, AWS S3 integration, and a fully animated dark-themed UI.",
       image: "/placeholder.svg",
-      technologies: ["Next.js", "TypeScript", "Stripe"],
+      technologies: ["Spring Boot", "Spring AI", "AWS EC2", "AWS S3", "React.js", "JWT", "Image Processing"],
       liveUrl: "#",
-      githubUrl: "#"
+      githubUrl: "#",
+      date: "February 2025",
+      features: [
+        "AI-powered food image recognition",
+        "Automatic calorie calculation",
+        "Secure JWT authentication",
+        "AWS S3 image storage",
+        "Animated dark theme UI"
+      ]
     },
     {
       id: 3,
-      title: "AI-Powered Dashboard",
-      description: "A modern dashboard with AI insights and real-time data visualization.",
+      title: "Legacy System Migration",
+      description: "Successfully migrated a 60-year-old C++ monolith to 15+ Java Spring Boot microservices with 95% test coverage and modern DevOps practices.",
       image: "/placeholder.svg",
-      technologies: ["React", "D3.js", "Python"],
+      technologies: ["Java 11", "Spring Boot", "Docker", "Kubernetes", "Jenkins", "AWS", "JUnit", "Mockito"],
       liveUrl: "#",
-      githubUrl: "#"
+      githubUrl: "#",
+      date: "November 2023 - Present",
+      features: [
+        "15+ microservices architecture",
+        "95% test coverage with JUnit & Mockito",
+        "Containerized with Docker & Kubernetes",
+        "CI/CD pipeline with Jenkins",
+        "AWS cloud deployment"
+      ]
     },
     {
       id: 4,
-      title: "Mobile App UI Kit",
-      description: "A comprehensive UI kit for mobile applications with dark mode support.",
+      title: "Groovy/XSLT Automation Tool",
+      description: "Built an automation tool that reduced manual effort by 70% using Groovy and XSLT transformations for data processing and workflow automation.",
       image: "/placeholder.svg",
-      technologies: ["React Native", "Expo", "Styled Components"],
+      technologies: ["Groovy", "XSLT", "Spring Boot", "PostgreSQL", "REST APIs"],
       liveUrl: "#",
-      githubUrl: "#"
+      githubUrl: "#",
+      date: "February 2022 - November 2023",
+      features: [
+        "70% reduction in manual effort",
+        "Automated data transformations",
+        "XSLT template processing",
+        "REST API integration",
+        "PostgreSQL data persistence"
+      ]
     },
     {
       id: 5,
-      title: "Social Media Platform",
-      description: "A modern social media platform with real-time messaging and content sharing.",
+      title: "Spring Boot API Suite",
+      description: "Developed 15+ RESTful APIs with Spring Boot featuring optimized SQL queries, third-party integrations, and comprehensive security measures.",
       image: "/placeholder.svg",
-      technologies: ["React", "Node.js", "Socket.io"],
+      technologies: ["Spring Boot", "Spring Security", "PostgreSQL", "OAuth2", "REST APIs", "SQL Optimization"],
       liveUrl: "#",
-      githubUrl: "#"
+      githubUrl: "#",
+      date: "2022 - 2023",
+      features: [
+        "15+ RESTful APIs",
+        "Optimized PostgreSQL queries",
+        "OAuth2 security implementation",
+        "Third-party API integrations",
+        "Comprehensive error handling"
+      ]
     },
     {
       id: 6,
-      title: "Task Management Tool",
-      description: "A collaborative task management application with team features and analytics.",
+      title: "Microservices DevOps Pipeline",
+      description: "Implemented complete DevOps pipeline for microservices using Docker, Kubernetes, Jenkins, and AWS with automated testing and deployment.",
       image: "/placeholder.svg",
-      technologies: ["Vue.js", "Express", "MongoDB"],
+      technologies: ["Docker", "Kubernetes", "Jenkins", "AWS", "Elasticsearch", "Monitoring", "CI/CD"],
       liveUrl: "#",
-      githubUrl: "#"
+      githubUrl: "#",
+      date: "2023 - Present",
+      features: [
+        "Automated CI/CD pipeline",
+        "Container orchestration",
+        "Elasticsearch logging",
+        "AWS cloud infrastructure",
+        "Automated testing & deployment"
+      ]
     }
   ];
 
@@ -81,8 +128,8 @@ const Projects = () => {
             </span>
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            A showcase of my latest work featuring cutting-edge technologies and innovative solutions.
-            Each project represents a unique challenge and creative approach to problem-solving.
+            A showcase of my latest work featuring enterprise-level backend solutions, 
+            AI integrations, and modern microservices architecture.
           </p>
         </motion.div>
 

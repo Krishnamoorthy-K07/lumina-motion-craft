@@ -5,33 +5,27 @@ export const SocialLinks = () => {
   const socialLinks = [
     {
       name: "LinkedIn",
-      url: "https://linkedin.com/in/yourprofile",
+      url: "https://www.linkedin.com/in/krishnamoorthyk-javadev/",
       icon: "💼",
       color: "from-blue-600 to-blue-700"
     },
     {
       name: "GitHub",
-      url: "https://github.com/yourprofile",
+      url: "https://github.com/Krishnamoorthy-K07",
       icon: "🐱",
       color: "from-gray-600 to-gray-700"
     },
     {
-      name: "Twitter",
-      url: "https://twitter.com/yourprofile",
-      icon: "🐦",
-      color: "from-blue-400 to-blue-500"
+      name: "Portfolio",
+      url: "https://krishnamoorthy-k07.github.io/portfolio/",
+      icon: "🌐",
+      color: "from-purple-500 to-purple-600"
     },
     {
-      name: "Instagram",
-      url: "https://instagram.com/yourprofile",
-      icon: "📸",
-      color: "from-pink-500 to-purple-600"
-    },
-    {
-      name: "YouTube",
-      url: "https://youtube.com/yourchannel",
-      icon: "📺",
-      color: "from-red-500 to-red-600"
+      name: "Email",
+      url: "mailto:krishnamoorthy.k07@outlook.com",
+      icon: "📧",
+      color: "from-green-500 to-green-600"
     }
   ];
 

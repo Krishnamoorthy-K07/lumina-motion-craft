@@ -10,6 +10,8 @@ interface Project {
   technologies: string[];
   liveUrl: string;
   githubUrl: string;
+  date?: string;
+  features?: string[];
 }
 
 interface ProjectCardProps {
@@ -102,8 +104,25 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
           </div>
 
           {/* Project Info */}
-          <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
+          <div className="flex justify-between items-start mb-2">
+            <h3 className="text-xl font-bold text-white">{project.title}</h3>
+            {project.date && (
+              <span className="text-xs text-purple-400 font-medium">{project.date}</span>
+            )}
+          </div>
           <p className="text-gray-300 mb-4 text-sm">{project.description}</p>
+
+          {/* Features */}
+          {project.features && (
+            <div className="mb-4">
+              <h4 className="text-sm font-semibold text-purple-300 mb-2">Key Features:</h4>
+              <ul className="text-xs text-gray-400 space-y-1">
+                {project.features.slice(0, 3).map((feature, index) => (
+                  <li key={index}>• {feature}</li>
+                ))}
+              </ul>
+            </div>
+          )}
 
           {/* Technologies */}
           <div className="flex flex-wrap gap-2">

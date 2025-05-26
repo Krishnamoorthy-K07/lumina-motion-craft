@@ -25,8 +25,8 @@ const Contact = () => {
             </span>
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Ready to start your next project? Let's collaborate and create something amazing together.
-            I'm always excited to work on innovative ideas and challenging projects.
+            Ready to discuss your next backend project or microservices architecture? 
+            Let's collaborate and build something amazing together with modern Java technologies.
           </p>
         </motion.div>
 
@@ -55,7 +55,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-gray-300">Email</p>
-                    <p className="text-white font-semibold">your.email@example.com</p>
+                    <p className="text-white font-semibold">krishnamoorthy.k07@outlook.com</p>
                   </div>
                 </div>
                 
@@ -65,17 +65,34 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-gray-300">Phone</p>
-                    <p className="text-white font-semibold">+1 (555) 123-4567</p>
+                    <p className="text-white font-semibold">638-387-4072</p>
                   </div>
                 </div>
                 
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full flex items-center justify-center">
-                    <span className="text-white font-bold">📍</span>
+                    <span className="text-white font-bold">🌐</span>
                   </div>
                   <div>
-                    <p className="text-gray-300">Location</p>
-                    <p className="text-white font-semibold">San Francisco, CA</p>
+                    <p className="text-gray-300">Portfolio</p>
+                    <a 
+                      href="https://krishnamoorthy-k07.github.io/portfolio/" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="text-purple-400 font-semibold hover:text-purple-300 transition-colors"
+                    >
+                      krishnamoorthy-k07.github.io/portfolio/
+                    </a>
+                  </div>
+                </div>
+
+                <div className="flex items-center space-x-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center">
+                    <span className="text-white font-bold">💼</span>
+                  </div>
+                  <div>
+                    <p className="text-gray-300">Current Role</p>
+                    <p className="text-white font-semibold">Senior Systems Engineer @ Infosys</p>
                   </div>
                 </div>
               </div>
