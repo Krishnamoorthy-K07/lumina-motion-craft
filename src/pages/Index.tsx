@@ -1,10 +1,10 @@
 
 import { motion } from "framer-motion";
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls, Float, Text3D, Center } from "@react-three/drei";
+import { OrbitControls } from "@react-three/drei";
 import { Suspense } from "react";
 import { HeroSection } from "../components/HeroSection";
-import { ThreeDScene } from "../components/ThreeDScene";
+import { Simple3DScene } from "../components/Simple3DScene";
 import { CallToAction } from "../components/CallToAction";
 
 const Index = () => {
@@ -28,7 +28,7 @@ const Index = () => {
         <div className="h-screen relative">
           <Canvas camera={{ position: [0, 0, 5], fov: 75 }}>
             <Suspense fallback={null}>
-              <ThreeDScene />
+              <Simple3DScene />
               <OrbitControls enableZoom={false} />
             </Suspense>
           </Canvas>
