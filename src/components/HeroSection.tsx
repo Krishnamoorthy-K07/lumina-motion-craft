@@ -60,8 +60,9 @@ export const HeroSection = () => {
             
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <a 
-                href="/resume.pdf"
-                download
+                href="https://drive.google.com/file/d/1P4FAdXyjub1XKvs0wGA3lr7cXkJeKlLc/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-block px-8 py-4 border-2 border-blue-500 rounded-full text-blue-400 font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300"
               >
                 Download Resume

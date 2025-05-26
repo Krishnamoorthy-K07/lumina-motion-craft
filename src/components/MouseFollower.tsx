@@ -25,12 +25,12 @@ export const MouseFollower = () => {
 
   return (
     <>
-      {/* Main cursor */}
+      {/* Main cursor - larger and more visible */}
       <motion.div
-        className="fixed top-0 left-0 w-4 h-4 bg-gradient-to-br from-purple-400 to-blue-400 rounded-full pointer-events-none z-50 mix-blend-difference"
+        className="fixed top-0 left-0 w-6 h-6 bg-gradient-to-br from-purple-400 to-blue-400 rounded-full pointer-events-none z-50 shadow-lg"
         animate={{
-          x: mousePosition.x - 8,
-          y: mousePosition.y - 8,
+          x: mousePosition.x - 12,
+          y: mousePosition.y - 12,
           scale: isVisible ? 1 : 0,
         }}
         transition={{
@@ -40,12 +40,27 @@ export const MouseFollower = () => {
         }}
       />
       
-      {/* Trailing glow */}
+      {/* Inner bright core */}
       <motion.div
-        className="fixed top-0 left-0 w-8 h-8 bg-gradient-to-br from-purple-400/30 to-blue-400/30 rounded-full pointer-events-none z-40 blur-sm"
+        className="fixed top-0 left-0 w-3 h-3 bg-white rounded-full pointer-events-none z-[51] shadow-sm"
         animate={{
-          x: mousePosition.x - 16,
-          y: mousePosition.y - 16,
+          x: mousePosition.x - 6,
+          y: mousePosition.y - 6,
+          scale: isVisible ? 1 : 0,
+        }}
+        transition={{
+          type: "spring",
+          stiffness: 600,
+          damping: 30,
+        }}
+      />
+      
+      {/* Trailing glow - more visible */}
+      <motion.div
+        className="fixed top-0 left-0 w-12 h-12 bg-gradient-to-br from-purple-400/40 to-blue-400/40 rounded-full pointer-events-none z-40 blur-sm"
+        animate={{
+          x: mousePosition.x - 24,
+          y: mousePosition.y - 24,
           scale: isVisible ? 1 : 0,
         }}
         transition={{
@@ -55,12 +70,12 @@ export const MouseFollower = () => {
         }}
       />
       
-      {/* Outer glow */}
+      {/* Outer glow - enhanced */}
       <motion.div
-        className="fixed top-0 left-0 w-12 h-12 bg-gradient-to-br from-purple-400/10 to-blue-400/10 rounded-full pointer-events-none z-30 blur-md"
+        className="fixed top-0 left-0 w-20 h-20 bg-gradient-to-br from-purple-400/20 to-blue-400/20 rounded-full pointer-events-none z-30 blur-md"
         animate={{
-          x: mousePosition.x - 24,
-          y: mousePosition.y - 24,
+          x: mousePosition.x - 40,
+          y: mousePosition.y - 40,
           scale: isVisible ? 1 : 0,
         }}
         transition={{
