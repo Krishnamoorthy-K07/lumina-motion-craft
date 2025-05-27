@@ -72,33 +72,23 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
               transition={{ duration: 0.3 }}
             />
             
-            {/* Hover overlay with links */}
+            {/* Hover overlay with GitHub link only */}
             <motion.div
-              className="absolute inset-0 flex items-center justify-center space-x-4"
+              className="absolute inset-0 flex items-center justify-center"
               animate={{
                 opacity: isHovered ? 1 : 0,
               }}
               transition={{ duration: 0.3 }}
             >
               <motion.a
-                href={project.liveUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-4 py-2 bg-purple-500 text-white rounded-full font-semibold hover:bg-purple-600 transition-colors"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Live Demo
-              </motion.a>
-              <motion.a
                 href={project.githubUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-4 py-2 bg-gray-700 text-white rounded-full font-semibold hover:bg-gray-600 transition-colors"
+                className="px-6 py-3 bg-gray-700 text-white rounded-full font-semibold hover:bg-gray-600 transition-colors"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                GitHub
+                View on GitHub
               </motion.a>
             </motion.div>
           </div>

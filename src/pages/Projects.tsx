@@ -11,7 +11,7 @@ const Projects = () => {
       image: "https://images.unsplash.com/photo-1587614387466-0a72ca909e16?w=600&h=400&fit=crop&crop=center",
       technologies: ["Spring Boot", "OpenAI GPT-3.5", "AWS Lambda", "AWS EC2", "React.js", "JWT Auth"],
       liveUrl: "#",
-      githubUrl: "#",
+      githubUrl: "https://github.com/Krishnamoorthy-K07",
       date: "March 2025",
       features: [
         "GPT-3.5 integration for intelligent responses",
@@ -27,7 +27,7 @@ const Projects = () => {
       image: "https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=600&h=400&fit=crop&crop=center",
       technologies: ["Spring Boot", "Spring AI", "AWS EC2", "AWS S3", "React.js", "JWT", "Image Processing"],
       liveUrl: "#",
-      githubUrl: "#",
+      githubUrl: "https://github.com/Krishnamoorthy-K07",
       date: "February 2025",
       features: [
         "AI-powered food image recognition",
