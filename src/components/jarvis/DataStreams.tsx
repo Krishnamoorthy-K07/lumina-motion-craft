@@ -1,7 +1,7 @@
 
 import { useRef, useMemo } from "react";
 import { useFrame } from "@react-three/fiber";
-import { Group, Vector3 } from "three";
+import { Group, Vector3, CatmullRomCurve3 } from "three";
 
 export const DataStreams = () => {
   const streamsRef = useRef<Group>(null);
@@ -35,28 +35,24 @@ export const DataStreams = () => {
 
   return (
     <group ref={streamsRef}>
-      {/* Spiral data streams using line geometry */}
+      {/* Spiral data streams using tube geometry */}
       {Array.from({ length: 6 }).map((_, i) => {
         const startRadius = 1 + i * 0.3;
         const endRadius = 3 + i * 0.2;
         const points = createSpiralPoints(startRadius, endRadius, 50);
+        const curve = new CatmullRomCurve3(points);
         
         return (
-          <line key={i}>
-            <bufferGeometry>
-              <bufferAttribute
-                attach="attributes-position"
-                array={new Float32Array(points.flatMap(p => [p.x, p.y, p.z]))}
-                count={points.length}
-                itemSize={3}
-              />
-            </bufferGeometry>
-            <lineBasicMaterial 
+          <mesh key={i}>
+            <tubeGeometry args={[curve, 50, 0.01, 8, false]} />
+            <meshStandardMaterial 
               color={i % 2 === 0 ? "#00ffff" : "#ffaa00"} 
+              emissive={i % 2 === 0 ? "#004444" : "#443300"}
+              emissiveIntensity={0.5}
               transparent 
               opacity={0.6} 
             />
-          </line>
+          </mesh>
         );
       })}
 
