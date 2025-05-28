@@ -39,7 +39,6 @@ export const JarvisBrain = ({ isInitialized }: JarvisBrainProps) => {
           emissiveIntensity={0.6}
           transparent
           opacity={0.7}
-          wireframe={false}
         />
       </Sphere>
 
@@ -70,9 +69,9 @@ export const JarvisBrain = ({ isInitialized }: JarvisBrainProps) => {
         ))}
       </group>
 
-      {/* Neural network nodes */}
-      {Array.from({ length: 12 }).map((_, i) => {
-        const angle = (i / 12) * Math.PI * 2;
+      {/* Neural network nodes - simplified */}
+      {Array.from({ length: 8 }).map((_, i) => {
+        const angle = (i / 8) * Math.PI * 2;
         const radius = 2.5;
         return (
           <mesh 
@@ -88,31 +87,6 @@ export const JarvisBrain = ({ isInitialized }: JarvisBrainProps) => {
               color="#ffaa00" 
               emissive="#ff6600" 
               emissiveIntensity={0.8}
-            />
-          </mesh>
-        );
-      })}
-
-      {/* Simple energy pulses instead of complex connections */}
-      {Array.from({ length: 8 }).map((_, i) => {
-        const angle = (i / 8) * Math.PI * 2;
-        const radius = 3.0;
-        return (
-          <mesh 
-            key={`pulse-${i}`}
-            position={[
-              Math.cos(angle) * radius,
-              Math.sin(angle) * radius * 0.3,
-              0
-            ]}
-          >
-            <sphereGeometry args={[0.02, 6, 6]} />
-            <meshStandardMaterial 
-              color="#00ffff" 
-              emissive="#0088aa" 
-              emissiveIntensity={0.8}
-              transparent
-              opacity={0.7}
             />
           </mesh>
         );
