@@ -5,23 +5,40 @@ import { motion } from "framer-motion";
 export const MouseFollower = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isVisible, setIsVisible] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    // Check if device is mobile/tablet
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 1024);
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+
     const updateMousePosition = (e: MouseEvent) => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
-      setIsVisible(true);
+      if (!isMobile) {
+        setMousePosition({ x: e.clientX, y: e.clientY });
+        setIsVisible(true);
+      }
     };
 
     const handleMouseLeave = () => setIsVisible(false);
 
-    window.addEventListener("mousemove", updateMousePosition);
-    document.addEventListener("mouseleave", handleMouseLeave);
+    if (!isMobile) {
+      window.addEventListener("mousemove", updateMousePosition);
+      document.addEventListener("mouseleave", handleMouseLeave);
+    }
 
     return () => {
       window.removeEventListener("mousemove", updateMousePosition);
       document.removeEventListener("mouseleave", handleMouseLeave);
+      window.removeEventListener('resize', checkMobile);
     };
-  }, []);
+  }, [isMobile]);
+
+  // Don't render anything on mobile devices
+  if (isMobile) return null;
 
   return (
     <>

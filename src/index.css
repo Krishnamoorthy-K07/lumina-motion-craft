@@ -91,7 +91,15 @@
 
   body {
     @apply bg-background text-foreground;
+    /* Hide custom cursor on mobile devices */
     cursor: none;
+  }
+
+  /* Show default cursor on mobile and tablet devices */
+  @media (max-width: 1024px) {
+    body {
+      cursor: auto;
+    }
   }
 
   /* Custom scrollbar */

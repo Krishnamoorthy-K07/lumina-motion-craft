@@ -28,7 +28,7 @@ const About = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              I'm Krishnamoorthy K, a passionate Senior Systems Engineer at Infosys with over 3 years of experience 
+              I'm Krishnamoorthy K, a passionate Technology Analyst at Infosys with over 3 years of experience 
               in backend development and cloud technologies. I specialize in Java Spring Boot microservices, 
               having successfully migrated legacy systems and built scalable solutions for enterprise clients.
             </motion.p>
@@ -93,32 +93,35 @@ const About = () => {
             
             <div className="space-y-8">
               <div className="bg-gray-800/50 rounded-xl p-6 border border-gray-700">
-                <h3 className="text-xl font-bold text-purple-400 mb-2">Senior Systems Engineer</h3>
-                <p className="text-blue-400 mb-2">Infosys | Nov 2023 – Present</p>
+                <h3 className="text-xl font-bold text-purple-400 mb-2">Technology Analyst</h3>
+                <p className="text-blue-400 mb-4">Infosys | Nov 2023 – Present | Tech Stack: Java 11, Spring Boot 3.1, Docker, Kubernetes, Jenkins, Elasticsearch, AWS</p>
                 <ul className="text-gray-300 space-y-2">
-                  <li>• Migrated a 60-year-old C++ system to 15+ Java Spring Boot microservices</li>
-                  <li>• Achieved 95% test coverage with JUnit & Mockito</li>
-                  <li>• Implemented Docker, Kubernetes, Jenkins, AWS, Elasticsearch</li>
-                  <li>• Led Agile Scrum for a 6-member team</li>
+                  <li>• Migrated a 60-year-old C++ subnet management system to Java, refactoring 200k+ lines into 15+ domain-specific Spring Boot microservices</li>
+                  <li>• Designed REST APIs with Spring Security for RBAC, boosting modularity & scalability by 40%</li>
+                  <li>• Wrote 300+ unit/integration tests using JUnit & Mockito, reaching 95% coverage and cutting production defects by 30%</li>
+                  <li>• Automated testing via Jenkins CI/CD, with regression testing and streamlined deployments</li>
+                  <li>• Dockerized and deployed services via Kubernetes, reducing release time by 50%</li>
+                  <li>• Centralized logs using Elasticsearch, cutting incident resolution time by 25%</li>
+                  <li>• Aligned system design with AWS EC2/S3 for cloud migration</li>
+                  <li>• Led Agile Scrum for a 6-member team, resolved 15+ Fortify security issues ensuring OWASP compliance</li>
                 </ul>
               </div>
 
               <div className="bg-gray-800/50 rounded-xl p-6 border border-gray-700">
                 <h3 className="text-xl font-bold text-purple-400 mb-2">Systems Engineer</h3>
-                <p className="text-blue-400 mb-2">Infosys | Feb 2022 – Nov 2023</p>
+                <p className="text-blue-400 mb-4">Infosys | Feb 2022 – Nov 2023 | Tech Stack: Java 8, Spring Boot 2.7, Groovy, XSLT, PostgreSQL</p>
                 <ul className="text-gray-300 space-y-2">
-                  <li>• Built Groovy/XSLT automation tool (reduced manual effort by 70%)</li>
-                  <li>• Created 15+ Spring Boot APIs</li>
-                  <li>• Optimized SQL/PostgreSQL queries & integrated third-party APIs</li>
+                  <li>• Built a Groovy/XSLT mediator tool to automate API workflows, reducing manual mapping by 70%</li>
+                  <li>• Engineered microservices for PostgreSQL data access, reducing query latency from 500ms to 200ms</li>
+                  <li>• Built 15+ Spring Boot APIs and documented with OpenAPI/Swagger, halving integration time</li>
                 </ul>
               </div>
 
               <div className="bg-gray-800/50 rounded-xl p-6 border border-gray-700">
-                <h3 className="text-xl font-bold text-purple-400 mb-2">Trainee</h3>
+                <h3 className="text-xl font-bold text-purple-400 mb-2">Systems Engineer Trainee</h3>
                 <p className="text-blue-400 mb-2">Infosys | Nov 2021 – Feb 2022</p>
                 <ul className="text-gray-300 space-y-2">
-                  <li>• Completed training in Java, Spring Boot, REST APIs</li>
-                  <li>• Dockerized backend project</li>
+                  <li>• Completed a 3-month Java/Spring Boot training program with a Dockerized capstone project</li>
                 </ul>
               </div>
             </div>
