@@ -93,27 +93,30 @@ export const JarvisBrain = ({ isInitialized }: JarvisBrainProps) => {
         );
       })}
 
-      {/* Connection lines between nodes */}
+      {/* Connection lines between nodes - using simple approach */}
       {Array.from({ length: 8 }).map((_, i) => {
         const startAngle = (i / 8) * Math.PI * 2;
         const endAngle = ((i + 2) / 8) * Math.PI * 2;
         const radius = 2.5;
         
+        const startX = Math.cos(startAngle) * radius;
+        const startY = Math.sin(startAngle) * radius * 0.5;
+        const endX = Math.cos(endAngle) * radius;
+        const endY = Math.sin(endAngle) * radius * 0.5;
+        
         return (
-          <line key={i}>
-            <bufferGeometry>
-              <bufferAttribute
-                attach="attributes-position"
-                array={new Float32Array([
-                  Math.cos(startAngle) * radius, Math.sin(startAngle) * radius * 0.5, 0,
-                  Math.cos(endAngle) * radius, Math.sin(endAngle) * radius * 0.5, 0
-                ])}
-                count={2}
-                itemSize={3}
-              />
-            </bufferGeometry>
-            <lineBasicMaterial color="#00ffff" transparent opacity={0.3} />
-          </line>
+          <mesh key={i} position={[(startX + endX) / 2, (startY + endY) / 2, 0]}>
+            <cylinderGeometry 
+              args={[0.005, 0.005, Math.sqrt((endX - startX) ** 2 + (endY - startY) ** 2), 4]} 
+            />
+            <meshStandardMaterial 
+              color="#00ffff" 
+              transparent 
+              opacity={0.3}
+              emissive="#0066aa"
+              emissiveIntensity={0.2}
+            />
+          </mesh>
         );
       })}
     </group>

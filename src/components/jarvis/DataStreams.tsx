@@ -1,7 +1,7 @@
 
 import { useRef } from "react";
 import { useFrame } from "@react-three/fiber";
-import { Group, Vector3 } from "three";
+import { Group, Vector3, BufferGeometry, Float32Array as ThreeFloat32Array } from "three";
 
 export const DataStreams = () => {
   const streamsRef = useRef<Group>(null);
@@ -40,13 +40,20 @@ export const DataStreams = () => {
         const startRadius = 1 + i * 0.3;
         const endRadius = 3 + i * 0.2;
         const points = createDataStreamPath(startRadius, endRadius, 50);
+        const positions = new Float32Array(points.length * 3);
+        
+        points.forEach((point, index) => {
+          positions[index * 3] = point.x;
+          positions[index * 3 + 1] = point.y;
+          positions[index * 3 + 2] = point.z;
+        });
         
         return (
-          <line key={i}>
+          <mesh key={i}>
             <bufferGeometry>
               <bufferAttribute
                 attach="attributes-position"
-                array={new Float32Array(points.flatMap(p => [p.x, p.y, p.z]))}
+                array={positions}
                 count={points.length}
                 itemSize={3}
               />
@@ -56,7 +63,7 @@ export const DataStreams = () => {
               transparent 
               opacity={0.6} 
             />
-          </line>
+          </mesh>
         );
       })}
 
