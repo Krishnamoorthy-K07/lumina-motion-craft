@@ -93,10 +93,10 @@ export const JarvisBrain = ({ isInitialized }: JarvisBrainProps) => {
         );
       })}
 
-      {/* Connection lines between nodes - using simple approach */}
-      {Array.from({ length: 8 }).map((_, i) => {
-        const startAngle = (i / 8) * Math.PI * 2;
-        const endAngle = ((i + 2) / 8) * Math.PI * 2;
+      {/* Simplified connection lines between nodes */}
+      {Array.from({ length: 6 }).map((_, i) => {
+        const startAngle = (i / 6) * Math.PI * 2;
+        const endAngle = ((i + 1) / 6) * Math.PI * 2;
         const radius = 2.5;
         
         const startX = Math.cos(startAngle) * radius;
@@ -104,20 +104,30 @@ export const JarvisBrain = ({ isInitialized }: JarvisBrainProps) => {
         const endX = Math.cos(endAngle) * radius;
         const endY = Math.sin(endAngle) * radius * 0.5;
         
-        return (
-          <mesh key={i} position={[(startX + endX) / 2, (startY + endY) / 2, 0]}>
-            <cylinderGeometry 
-              args={[0.005, 0.005, Math.sqrt((endX - startX) ** 2 + (endY - startY) ** 2), 4]} 
-            />
-            <meshStandardMaterial 
-              color="#00ffff" 
-              transparent 
-              opacity={0.3}
-              emissive="#0066aa"
-              emissiveIntensity={0.2}
-            />
-          </mesh>
-        );
+        const distance = Math.sqrt((endX - startX) ** 2 + (endY - startY) ** 2);
+        const midX = (startX + endX) / 2;
+        const midY = (startY + endY) / 2;
+        
+        // Only create cylinder if distance is valid
+        if (distance > 0 && !isNaN(distance)) {
+          return (
+            <mesh 
+              key={i} 
+              position={[midX, midY, 0]}
+              rotation={[0, 0, Math.atan2(endY - startY, endX - startX)]}
+            >
+              <cylinderGeometry args={[0.005, 0.005, distance, 4]} />
+              <meshStandardMaterial 
+                color="#00ffff" 
+                transparent 
+                opacity={0.3}
+                emissive="#0066aa"
+                emissiveIntensity={0.2}
+              />
+            </mesh>
+          );
+        }
+        return null;
       })}
     </group>
   );
