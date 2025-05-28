@@ -93,41 +93,29 @@ export const JarvisBrain = ({ isInitialized }: JarvisBrainProps) => {
         );
       })}
 
-      {/* Simplified connection lines between nodes */}
-      {Array.from({ length: 6 }).map((_, i) => {
-        const startAngle = (i / 6) * Math.PI * 2;
-        const endAngle = ((i + 1) / 6) * Math.PI * 2;
-        const radius = 2.5;
-        
-        const startX = Math.cos(startAngle) * radius;
-        const startY = Math.sin(startAngle) * radius * 0.5;
-        const endX = Math.cos(endAngle) * radius;
-        const endY = Math.sin(endAngle) * radius * 0.5;
-        
-        const distance = Math.sqrt((endX - startX) ** 2 + (endY - startY) ** 2);
-        const midX = (startX + endX) / 2;
-        const midY = (startY + endY) / 2;
-        
-        // Only create cylinder if distance is valid
-        if (distance > 0 && !isNaN(distance)) {
-          return (
-            <mesh 
-              key={i} 
-              position={[midX, midY, 0]}
-              rotation={[0, 0, Math.atan2(endY - startY, endX - startX)]}
-            >
-              <cylinderGeometry args={[0.005, 0.005, distance, 4]} />
-              <meshStandardMaterial 
-                color="#00ffff" 
-                transparent 
-                opacity={0.3}
-                emissive="#0066aa"
-                emissiveIntensity={0.2}
-              />
-            </mesh>
-          );
-        }
-        return null;
+      {/* Simple energy pulses instead of complex connections */}
+      {Array.from({ length: 8 }).map((_, i) => {
+        const angle = (i / 8) * Math.PI * 2;
+        const radius = 3.0;
+        return (
+          <mesh 
+            key={`pulse-${i}`}
+            position={[
+              Math.cos(angle) * radius,
+              Math.sin(angle) * radius * 0.3,
+              0
+            ]}
+          >
+            <sphereGeometry args={[0.02, 6, 6]} />
+            <meshStandardMaterial 
+              color="#00ffff" 
+              emissive="#0088aa" 
+              emissiveIntensity={0.8}
+              transparent
+              opacity={0.7}
+            />
+          </mesh>
+        );
       })}
     </group>
   );
