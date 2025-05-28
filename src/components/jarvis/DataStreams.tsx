@@ -1,7 +1,7 @@
 
 import { useRef } from "react";
 import { useFrame } from "@react-three/fiber";
-import { Group, Vector3, BufferGeometry, Float32Array as ThreeFloat32Array } from "three";
+import { Group, Vector3, BufferGeometry } from "three";
 
 export const DataStreams = () => {
   const streamsRef = useRef<Group>(null);
