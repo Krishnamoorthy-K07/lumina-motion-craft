@@ -1,6 +1,6 @@
 
 import { motion } from "framer-motion";
-import { JarvisInterface } from "../components/JarvisInterface";
+import { HeroSection } from "../components/HeroSection";
 
 const Index = () => {
   return (
@@ -11,7 +11,7 @@ const Index = () => {
       transition={{ duration: 0.5 }}
       className="min-h-screen relative"
     >
-      <JarvisInterface />
+      <HeroSection />
     </motion.div>
   );
 };
