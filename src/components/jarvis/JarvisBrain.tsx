@@ -2,7 +2,6 @@
 import { useRef } from "react";
 import { useFrame } from "@react-three/fiber";
 import { Mesh, Group } from "three";
-import { Sphere } from "@react-three/drei";
 
 interface JarvisBrainProps {
   isInitialized: boolean;
@@ -32,7 +31,8 @@ export const JarvisBrain = ({ isInitialized }: JarvisBrainProps) => {
   return (
     <group ref={brainRef} position={[0, 0, 0]}>
       {/* Central Core */}
-      <Sphere ref={coreRef} args={[0.8, 32, 32]}>
+      <mesh ref={coreRef}>
+        <sphereGeometry args={[0.8, 32, 32]} />
         <meshStandardMaterial 
           color="#00ffff" 
           emissive="#0088aa" 
@@ -40,10 +40,11 @@ export const JarvisBrain = ({ isInitialized }: JarvisBrainProps) => {
           transparent
           opacity={0.7}
         />
-      </Sphere>
+      </mesh>
 
       {/* Inner energy core */}
-      <Sphere args={[0.6, 16, 16]}>
+      <mesh>
+        <sphereGeometry args={[0.6, 16, 16]} />
         <meshStandardMaterial 
           color="#ffffff" 
           emissive="#00aaff" 
@@ -51,7 +52,7 @@ export const JarvisBrain = ({ isInitialized }: JarvisBrainProps) => {
           transparent
           opacity={0.4}
         />
-      </Sphere>
+      </mesh>
 
       {/* Rotating rings around brain */}
       <group ref={innerRingsRef}>
