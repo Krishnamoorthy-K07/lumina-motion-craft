@@ -18,7 +18,7 @@ export const HolographicRings = () => {
       {/* Large outer rings */}
       {[4, 5, 6].map((radius, index) => (
         <mesh key={`outer-${index}`} rotation={[Math.PI / 2, 0, 0]}>
-          <torusGeometry args={[radius, 0.01, 4, 100]} />
+          <torusGeometry args={[radius, 0.01, 8, 64]} />
           <meshStandardMaterial 
             color="#00ffff" 
             emissive="#0044aa" 
@@ -32,7 +32,7 @@ export const HolographicRings = () => {
       {/* Vertical scanning rings */}
       {[3.5, 4.5].map((radius, index) => (
         <mesh key={`vertical-${index}`} rotation={[0, 0, Math.PI / 2]}>
-          <torusGeometry args={[radius, 0.02, 4, 80]} />
+          <torusGeometry args={[radius, 0.02, 8, 64]} />
           <meshStandardMaterial 
             color="#ffaa00" 
             emissive="#ff6600" 
@@ -43,9 +43,9 @@ export const HolographicRings = () => {
         </mesh>
       ))}
 
-      {/* Diagonal scanning rings */}
+      {/* Diagonal scanning ring */}
       <mesh rotation={[Math.PI / 4, Math.PI / 4, 0]}>
-        <torusGeometry args={[5.5, 0.015, 4, 120]} />
+        <torusGeometry args={[5.5, 0.015, 8, 64]} />
         <meshStandardMaterial 
           color="#ff00ff" 
           emissive="#aa0066" 

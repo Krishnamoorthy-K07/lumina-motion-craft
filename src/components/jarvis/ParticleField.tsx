@@ -1,21 +1,22 @@
 
 import { useRef, useMemo } from "react";
 import { useFrame } from "@react-three/fiber";
-import { Points, BufferGeometry } from "three";
+import { Points } from "three";
 
 export const ParticleField = () => {
   const pointsRef = useRef<Points>(null);
 
+  const particleCount = 1000;
   const particlePositions = useMemo(() => {
-    const positions = new Float32Array(1000 * 3);
-    
-    for (let i = 0; i < 1000; i++) {
-      positions[i * 3] = (Math.random() - 0.5) * 20;
-      positions[i * 3 + 1] = (Math.random() - 0.5) * 20;
-      positions[i * 3 + 2] = (Math.random() - 0.5) * 20;
+    const positions = [];
+    for (let i = 0; i < particleCount; i++) {
+      positions.push(
+        (Math.random() - 0.5) * 20,
+        (Math.random() - 0.5) * 20,
+        (Math.random() - 0.5) * 20
+      );
     }
-    
-    return positions;
+    return new Float32Array(positions);
   }, []);
 
   useFrame((state) => {
@@ -31,7 +32,7 @@ export const ParticleField = () => {
         <bufferAttribute
           attach="attributes-position"
           array={particlePositions}
-          count={particlePositions.length / 3}
+          count={particleCount}
           itemSize={3}
         />
       </bufferGeometry>
@@ -40,7 +41,6 @@ export const ParticleField = () => {
         size={0.02} 
         transparent 
         opacity={0.6}
-        sizeAttenuation
       />
     </points>
   );
